@@ -1,0 +1,18 @@
+body{
+    width: max-content;
+    margin: auto;
+}
+
+.square1 color1{
+    width:100px;
+    height: 100px;
+    background-color: black;
+    display: inline-block;
+}
+
+.square2 color2{
+    width:100px;
+    height: 100px;
+    background-color: red;
+    display: inline-block;
+}
