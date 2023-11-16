@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>
+    <style>
+        *{
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 27pt;
+        }
+        div{
+            margin-bottom: 10px;
+            /* display: flex; */
+            /* justify-content: space-between; */
+            /* align-items: center; */
+        }
+        .labels{
+            width: 70%;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <form action="/survey" method="post" name="survey" id="survey" style="padding: 20px; background-color: rgb(204, 177, 240); margin: auto; width: 60%; height: max-content; border-radius: 20px;">
+        <div class="labels">
+            <label for="name" >Your Name: </label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="labels">
+            <label for="location" >Dojo Name: </label>
+            <!-- <select name="location" id="location">
+                <option value="New York City" id="ny">New York City</option>
+                <option value="San Jose" id="san_jose">San Jose</option>
+                <option value="Chicago" id="chicago">Chicago</option>
+                <option value="Houston" id="houston">Houston</option>
+                <option value="Orlando" id="orlando">Orlando</option>
+            </select> -->
+            <select name="location" class="form-select form-select-lg mb-3" aria-label="Large select example">
+                <option selected>Select Your City</option>
+                <option value="New York City" id="ny">New York City</option>
+                <option value="San Jose" id="san_jose">San Jose</option>
+                <option value="Chicago" id="chicago">Chicago</option>
+                <option value="Houston" id="houston">Houston</option>
+                <option value="Orlando" id="orlando">Orlando</option>
+            </select>
+        </div>
+        <div class="labels">
+            <label for="language" >Favorite Language: </label>
+            <select name="language" id="language">
+                <option value="Python" id="python">Python</option>
+                <option value="JavaScript" id="js">JavaScript</option>
+                <option value="Java" id="java">Java</option>
+                <option value="C++" id="c++">C++</option>
+                <option value="HTML" id="html">HTML</option>
+            </select>
+        </div>
+        <div>
+            <h3>What is your favorite color Power Ranger?</h3>
+            <input type="radio" name="color" id="blue" value="Blue"> Blue
+            <input type="radio" name="color" id="red" value="Red"> Red
+            <input type="radio" name="color" id="green" value="Green"> Green
+            <input type="radio" name="color" id="white" value="White"> White
+            <input type="radio" name="color" id="black" value="Black"> Black
+        </div>
+        <h3>What are you here for?</h3>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" name="here_for" role="switch" id="flexSwitchCheckChecked" value="FUN" >
+            <label class="form-check-label" for="flexSwitchCheckChecked">FUN</label>
+            <input class="form-check-input" type="checkbox"  name="here_for2" role="switch" id="flexSwitchCheckDefault" value="BUSINESS">
+            <label class="form-check-label" for="flexSwitchCheckDefault">BUSINESS</label>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <label for="comment" id="comment">Comment (optional)</label>
+        </div>
+        <div>
+            <textarea name="comment" id="comment" cols="30" rows="10" style="width: 100%; color: black"></textarea>
+            <!-- <textarea type="text" name="comment" id="comment" style="width: 100%; height: 200px; color: black; text-align: left; vertical-align: top;"> -->
+        </div>
+        <input type="submit" name="submit" id="submit" style="color: black; padding: 10px">
+    </form>
+</body>
+</html>

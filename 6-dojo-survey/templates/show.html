@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks for Submitting!</title>
+    <style>
+        .heading{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 1000px; height: max-content; background-color: {{session['color']}}; padding: 30px;">
+        <h1>Thanks for coming, {{session['name']}}!</h1>
+        <h2 class="heading">Submitted Info:</h2>
+        <p>Name: {{session.get('name')}}</p>
+        <p>Dojo Location: {{session.get('location')}}</p>
+        <p>Favorite Language: {{session.get('language')}}</p>
+        <p>Comment:{{session['comment']}}</p>
+        <p>Favorite Color: {{session['color']}}</p>
+        <p>Here for {{session['here_for']}} and... {{session['here_for2']}}!</p>
+    </div>
+</body>
+</html>
